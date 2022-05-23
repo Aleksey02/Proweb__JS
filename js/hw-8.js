@@ -9,10 +9,10 @@ function randomSign(){
     if(num<=4){
         return '+'
     }
-    else if(num>4 && num<=8){
+    else if(num>=4 && num<8){
         return '-'
     }
-    else if(num>8 && num<=12){
+    else if(num>=8 && num<12){
         return '*'
     }
     else{
@@ -28,23 +28,23 @@ for(let i=0; i<count; i++){
     let correctAnswer, trueAnswer;
     
     if(sign == '+'){
-        trueAnswer = userAnswer == (num1+num2)? 'Верный': 'Не верный';
+        trueAnswer = userAnswer == (num1+num2)? 'верный': 'не верный';
         correctAnswer = num1+num2;
     }
     else if(sign == '-'){
-        trueAnswer = userAnswer == (num1-num2)? 'Верный': 'Не верный';
+        trueAnswer = userAnswer == (num1-num2)? 'верный': 'не верный';
         correctAnswer = num1-num2;
     }
     else if(sign == '*'){
-        trueAnswer = userAnswer == (num1*num2)? 'Верный': 'Не верный';
+        trueAnswer = userAnswer == (num1*num2)? 'верный': 'не верный';
         correctAnswer = num1*num2;
     }
     else{
-        trueAnswer = userAnswer == (num1/num2)? 'Верный': 'Не верный';
+        trueAnswer = userAnswer == (num1/num2)? 'верный': 'не верный';
         correctAnswer = num1/num2;
     }
 
-    if(trueAnswer == 'Верный'){
+    if(trueAnswer == 'верный'){
         alert('Ваш ответ ' + trueAnswer + ' - ' + userAnswer);
     }
     else{
